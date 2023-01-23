@@ -9,8 +9,8 @@ def app(key, value):
     else:
         finally_dict[key] = [str(type(value))[8:-2]]
 
-def if_dict(list_of_dicts):
-    for key, value in list_of_dicts.items():
+def if_dict(dict):
+    for key, value in dict.items():
         if type(value) == dict:
             if_dict(value)
         else:
